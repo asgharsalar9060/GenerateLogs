@@ -12,54 +12,75 @@ import org.testng.annotations.Test;
 import org.testng.log4testng.Logger;
 
 public class LoginTest {
+	//What is log? : capturing info/activities at the time of program execution. 
+	// types of logs:
+		//1. info
+		//2. warn
+		//3. debug
+		//4. fatal
+		
+	//how to generate the logs? : use Apache log4j API (log4j jar)
+	//How it works? : it reads log 4j configuration from log4j.properties file
+	//where to create: create inside resources folder
 	
-	//What is log? capturing info/activities at the time of program execution.
-	//Type of logs:
-	//1. info
-	//2. warn
-	//3. error
-	//4. fatal
-	
-	//How to generate logs? use Apache log4j API
-	//How it works? it reads log 4j configuration from log4j.properties file
-	//Where to create log4j.properties? inside the resource folder
-	
-	
-	
-
 	WebDriver driver;
 	Logger log = Logger.getLogger(LoginTest.class);
 	
+	
 	@BeforeMethod
-	public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\User\\\\OneDrive\\\\Documents\\\\Selenium\\\\drivers\\\\chromedriver.exe");
-		driver = new ChromeDriver();
-		log.info("launching chrome browser");
+	public void setup(){
+		log.info("****************************** Starting test cases execution  *****************************************");
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\User\\OneDrive\\Documents\\Selenium\\drivers\\chromedriver.exe");	
+		driver = new ChromeDriver(); 
+		log.info("launching chrome broswer");
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		
 		driver.get("https://classic.freecrm.com/index.html");
-		log.info("entering application url");
+		log.info("entering application URL");
+		log.warn("Hey this just a warning message");
+		log.fatal("hey this is just fatal error message");
+		log.debug("this is debug message");
 	}
 	
-	@Test
-	public void FreeCrmTitleTest() {
+	
+	@Test(priority=1)
+	public void freeCrmTitleTest(){
+		log.info("****************************** starting test case *****************************************");
+		log.info("****************************** freeCrmTitleTest *****************************************");
 		String title = driver.getTitle();
 		System.out.println(title);
-		log.info("login page title is-->"+title);
-		Assert.assertEquals(title, "Free CRM - CRM software for customer relationship management, sales, and support.");	
+		log.info("login page title is--->"+title);
+		Assert.assertEquals(title,"Free CRM - CRM software for customer relationship management, sales, and support.");
+		
+		log.info("****************************** ending test case *****************************************");
+		log.info("****************************** freeCrmTitleTest *****************************************");
+
 	}
 	
-	@Test
-	public void FreeCrmLogoImg() {
-		boolean b = driver.findElement(By.xpath("//a[@class='navbar-brand']")).isDisplayed();
+	@Test(priority=2)
+	public void freemCRMLogoTest(){
+		log.info("****************************** starting test case *****************************************");
+		log.info("****************************** freemCRMLogoTest *****************************************");
+
+		boolean b = driver.findElement(By.xpath("//img[@class='img-responsive']")).isDisplayed();
 		Assert.assertTrue(b);
+		
+		log.info("****************************** ending test case *****************************************");
+		log.info("****************************** freemCRMLogoTest *****************************************");
+
 	}
 	
+	
+
 	@AfterMethod
-	public void tearDown() {
+	public void tearDown(){
 		driver.quit();
-	}
+		log.info("****************************** Browser is closed *****************************************");
+
+		
+	}	
 }

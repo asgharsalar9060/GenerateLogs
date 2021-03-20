@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-17T14:09:27 ULAT" name="Default suite" finished-at="2021-03-17T14:09:51 ULAT" duration-ms="23765">
+  <suite started-at="2021-03-20T19:44:43 ULAT" name="Default suite" finished-at="2021-03-20T19:45:04 ULAT" duration-ms="21656">
     <groups>
     </groups>
-    <test started-at="2021-03-17T14:09:27 ULAT" name="Default test" finished-at="2021-03-17T14:09:51 ULAT" duration-ms="23765">
+    <test started-at="2021-03-20T19:44:43 ULAT" name="Default test" finished-at="2021-03-20T19:45:04 ULAT" duration-ms="21656">
       <class name="com.tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tests.LoginTest@29647f75]" started-at="2021-03-17T14:09:27 ULAT" name="setUp" finished-at="2021-03-17T14:09:38 ULAT" duration-ms="11258" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.tests.LoginTest@13fd2ccd]" started-at="2021-03-20T19:44:43 ULAT" name="setup" finished-at="2021-03-20T19:44:50 ULAT" duration-ms="7783" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="FreeCrmLogoImg()[pri:0, instance:com.tests.LoginTest@29647f75]" started-at="2021-03-17T14:09:38 ULAT" name="FreeCrmLogoImg" finished-at="2021-03-17T14:09:38 ULAT" duration-ms="151" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="freeCrmTitleTest()[pri:1, instance:com.tests.LoginTest@13fd2ccd]" started-at="2021-03-20T19:44:50 ULAT" name="freeCrmTitleTest" finished-at="2021-03-20T19:44:51 ULAT" duration-ms="101" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FreeCrmLogoImg -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.LoginTest@29647f75]" started-at="2021-03-17T14:09:38 ULAT" name="tearDown" finished-at="2021-03-17T14:09:40 ULAT" duration-ms="1239" status="PASS">
+        </test-method> <!-- freeCrmTitleTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.LoginTest@13fd2ccd]" started-at="2021-03-20T19:44:51 ULAT" name="tearDown" finished-at="2021-03-20T19:44:51 ULAT" duration-ms="796" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tests.LoginTest@29647f75]" started-at="2021-03-17T14:09:40 ULAT" name="setUp" finished-at="2021-03-17T14:09:50 ULAT" duration-ms="10195" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.tests.LoginTest@13fd2ccd]" started-at="2021-03-20T19:44:51 ULAT" name="setup" finished-at="2021-03-20T19:45:03 ULAT" duration-ms="11212" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="FreeCrmTitleTest()[pri:0, instance:com.tests.LoginTest@29647f75]" started-at="2021-03-17T14:09:50 ULAT" name="FreeCrmTitleTest" finished-at="2021-03-17T14:09:50 ULAT" duration-ms="49" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="freemCRMLogoTest()[pri:2, instance:com.tests.LoginTest@13fd2ccd]" started-at="2021-03-20T19:45:03 ULAT" name="freemCRMLogoTest" finished-at="2021-03-20T19:45:03 ULAT" duration-ms="166" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- FreeCrmTitleTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.LoginTest@29647f75]" started-at="2021-03-17T14:09:50 ULAT" name="tearDown" finished-at="2021-03-17T14:09:51 ULAT" duration-ms="794" status="PASS">
+        </test-method> <!-- freemCRMLogoTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.LoginTest@13fd2ccd]" started-at="2021-03-20T19:45:03 ULAT" name="tearDown" finished-at="2021-03-20T19:45:04 ULAT" duration-ms="1449" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
